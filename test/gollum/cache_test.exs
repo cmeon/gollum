@@ -42,7 +42,7 @@ defmodule Gollum.CacheTest do
         reraise error, __STACKTRACE__
       else
         Process.sleep(interval)
-        assert_eventually(fun, deadline, interval)
+        do_assert_eventually(fun, deadline, interval)
       end
   end
 end
